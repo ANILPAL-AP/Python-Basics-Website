@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Basics | Learn Python</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            🐍 Python Basics
+        </div>
+
+        <nav class="navbar">
+
+            <a href="#home">Home</a>
+
+            <a href="#topics">Topics</a>
+
+            <a href="#about">About</a>
+
+            <a href="https://github.com/" target="_blank">
+                GitHub
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HOME SECTION
+    ====================================================== -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                🐍 PYTHON PROGRAMMING
+            </p>
+
+            <h1>
+                Learn Python<br>
+                From Basics
+            </h1>
+
+            <p>
+                Learn Python programming with simple definitions,
+                examples, code, output and exam-friendly notes.
+            </p>
+
+            <a href="#topics" class="start-button">
+                Start Learning →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TOPICS SECTION
+    ====================================================== -->
+
+    <section id="topics" class="topics-section">
+
+        <div class="section-heading">
+
+            <p>LEARNING ROADMAP</p>
+
+            <h2>Python Basics Topics</h2>
+
+            <span>
+                Select a topic to start learning.
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             TOPIC CONTAINER
+        ================================================== -->
+
+        <div class="topics-container">
+
+
+            <!-- =============================================
+                 HELLO WORLD
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    👋
+                </div>
+
+                <h3>Hello World</h3>
+
+                <p>
+                    Learn your first Python program.
+                </p>
+
+                <button onclick="openTopic('hello-world')">
+                    Learn →
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 VARIABLES & DATA TYPES
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    📦
+                </div>
+
+                <h3>Variables & Data Types</h3>
+
+                <p>
+                    Learn variables and different data types.
+                </p>
+
+                <button onclick="openTopic('variables')">
+                    Learn →
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 INPUT & OUTPUT
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    ⌨️
+                </div>
+
+                <h3>Input & Output</h3>
+
+                <p>
+                    Learn how to take input and display output.
+                </p>
+
+                <button onclick="openTopic('input-output')">
+                    Learn →
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 OPERATORS
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    ➕
+                </div>
+
+                <h3>Operators</h3>
+
+                <p>
+                    Learn arithmetic, comparison and logical operators.
+                </p>
+
+                <button onclick="openTopic('operators')">
+                    Learn →
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 IF ELSE
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    🔀
+                </div>
+
+                <h3>If - Else</h3>
+
+                <p>
+                    Learn decision making in Python.
+                </p>
+
+                <button onclick="openTopic('if-else')">
+                    Learn →
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 LOOPS
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    🔄
+                </div>
+
+                <h3>Loops</h3>
+
+                <p>
+                    Learn For Loop and While Loop.
+                </p>
+
+                <button onclick="toggleSubMenu('loops-menu')">
+                    Explore ▼
+                </button>
+
+
+                <!-- LOOP SUBMENU -->
+
+                <div id="loops-menu" class="sub-menu">
+
+                    <button onclick="openTopic('for-loop')">
+                        📄 For Loop
+                    </button>
+
+                    <button onclick="openTopic('while-loop')">
+                        📄 While Loop
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 FUNCTIONS
+            ============================================== -->
+
+            <div class="topic-card">
+
+                <div class="topic-icon">
+                    ⚙️
+                </div>
+
+                <h3>Functions</h3>
+
+                <p>
+                    Learn functions from basic to advanced.
+                </p>
+
+                <button onclick="toggleSubMenu('functions-menu')">
+                    Explore ▼
+                </button>
+
+
+                <!-- FUNCTION SUBMENU -->
+
+                <div id="functions-menu" class="sub-menu">
+
+                    <button onclick="openTopic('basic-function')">
+                        📄 Basic Function
+                    </button>
+
+                    <button onclick="openTopic('function-arguments')">
+                        📄 Function with Arguments
+                    </button>
+
+                    <button onclick="openTopic('function-return')">
+                        📄 Function with Return
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================================================
+     TOPIC CONTENT SECTION
+====================================================== -->
+
+<section id="topic-content" class="topic-content-section">
+
+    <div class="topic-content-container">
+
+        <div class="topic-content-header">
+
+            <p>LEARNING TOPIC</p>
+
+            <h2 id="topic-title">
+                Select a Topic
+            </h2>
+
+        </div>
+
+
+        <!-- Definition -->
+
+        <div class="content-box">
+
+            <h3>📌 Definition</h3>
+
+            <p id="topic-definition">
+                Select any Python topic to start learning.
+            </p>
+
+        </div>
+
+
+        <!-- Syntax -->
+
+        <div class="content-box">
+
+            <h3>💻 Syntax</h3>
+
+            <pre><code id="topic-syntax">
+Select a topic to view syntax.
+            </code></pre>
+
+        </div>
+
+
+        <!-- Example -->
+
+        <div class="content-box">
+
+            <h3>🧪 Example</h3>
+
+            <pre><code id="topic-example">
+Select a topic to view an example.
+            </code></pre>
+
+        </div>
+
+
+        <!-- Output -->
+
+        <div class="content-box">
+
+           <!-- =====================================================
+     SYNTAX
+====================================================== -->
+
+<div class="content-box">
+
+    <h3>💻 Syntax</h3>
+
+    <div class="code-container">
+
+        <button class="copy-button" onclick="copyCode('topic-syntax')">
+            📋 Copy
+        </button>
+
+        <pre><code id="topic-syntax">
+Select a topic to view syntax.
+        </code></pre>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EXAMPLE
+====================================================== -->
+
+<div class="content-box">
+
+    <h3>🧪 Example</h3>
+
+    <div class="code-container">
+
+        <button class="copy-button" onclick="copyCode('topic-example')">
+            📋 Copy
+        </button>
+
+        <pre><code id="topic-example">
+Select a topic to view an example.
+        </code></pre>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     OUTPUT
+====================================================== -->
+
+<div class="content-box">
+
+    <h3>📤 Output</h3>
+
+    <div class="code-container">
+
+        <button class="copy-button" onclick="copyCode('topic-output')">
+            📋 Copy
+        </button>
+
+        <pre><code id="topic-output">
+Output will appear here.
+        </code></pre>
+
+    </div>
+
+</div>
+
+
+        <!-- Explanation -->
+
+        <div class="content-box">
+
+            <h3>📝 Explanation</h3>
+
+            <p id="topic-explanation">
+                Topic explanation will appear here.
+            </p>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="content-box">
+
+            <h3>📚 Summary</h3>
+
+            <p id="topic-summary">
+                Topic summary will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =====================================================
+         ABOUT SECTION
+    ====================================================== -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-heading">
+
+            <p>ABOUT PROJECT</p>
+
+            <h2>About Python Basics</h2>
+
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                Python Basics is a beginner-friendly learning
+                project designed to understand fundamental
+                Python programming concepts.
+            </p>
+
+            <p>
+                Each topic contains definitions, syntax,
+                examples, programs, outputs and exam-friendly
+                explanations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Python Basics | Made for Learning
+        </p>
+
+        <p>
+            Python • Programming • Learning
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
